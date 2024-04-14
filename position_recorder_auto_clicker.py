@@ -47,7 +47,7 @@ def new_recording():
                 writer.writerow(["X", "Y", "Time"])
                 writer.writerows(zip(x_array, y_array, timing_array))
 
-
+#Run the saved inputs in positions.csv
 def run_recorded():
     with open("positions.csv", "r", newline="") as file:
         reader = csv.reader(file, delimiter=';')
