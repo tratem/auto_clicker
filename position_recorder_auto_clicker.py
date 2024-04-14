@@ -49,6 +49,8 @@ def new_recording():
 
 #Run the saved inputs in positions.csv
 def run_recorded():
+    print(f"The script is starting in {init_delay}s. Move to the desired position.")
+    time.sleep(init_delay)
     with open("positions.csv", "r", newline="") as file:
         reader = csv.reader(file, delimiter=';')
         next(reader)           
